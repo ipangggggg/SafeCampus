@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FA"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnBackReport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⬅ Back"
+            android:textSize="14sp"
+            android:textColor="#003366"
+            android:backgroundTint="#E0E0E0"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Report Incident"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#003366"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type of Incident"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroupType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:layout_marginBottom="5dp">
+
+            <RadioButton android:id="@+id/rbDamage" android:text="Infrastructure Damage" android:checked="true"/>
+            <RadioButton android:id="@+id/rbAccident" android:text="Road Accident"/>
+            <RadioButton android:id="@+id/rbCrime" android:text="Suspicious Activity / Crime"/>
+
+            <RadioButton android:id="@+id/rbOthers" android:text="Others (Please specify)"/>
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/etOtherType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Specify incident type (e.g. Snake, Fire)"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:layout_marginBottom="15dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"/>
+
+        <EditText
+            android:id="@+id/etDescription"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#FFFFFF"
+            android:gravity="top"
+            android:hint="Describe what happened..."
+            android:padding="10dp"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:id="@+id/tvLocationInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Location: Detecting..."
+            android:textColor="#666666"
+            android:padding="10dp"
+            android:background="#E0E0E0"
+            android:layout_marginBottom="20dp"/>
+
+        <Button
+            android:id="@+id/btnSubmitReport"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="SEND REPORT"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#002244"
+            android:backgroundTint="#F7C948"/>
+
+    </LinearLayout>
+</ScrollView>
